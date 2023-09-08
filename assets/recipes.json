@@ -1,0 +1,117 @@
+[
+    {
+      "name": "Spaghetti Bolognese",
+      "description": "A classic Italian meat sauce served over pasta",
+      "imageUrl": "https://www.allrecipes.com/thmb/MkKfYU4oim55CLp39DDuNMuyThA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/23600-spaghetti-bolognese-mfs-4X3-0909-cddaf944d40b4e1c937e98c4a27a3144.jpg",
+      "ingredients": ["spaghetti", "ground beef", "onions", "tomato sauce", "red wine"],
+      "steps": ["Cook the spaghetti according to package directions.", "Brown the ground beef and onions.", "Add the tomato sauce and red wine and simmer for 1 hour.", "Toss with cooked spaghetti and serve."],
+      "nutrition": {
+        "calories": 650,
+        "protein": 35, 
+        "prepTime": 60
+      }
+    },
+    {
+      "name": "Chicken Parmesan", 
+      "description": "Breaded chicken breast topped with tomato sauce and mozzarella",
+      "imageUrl": "https://www.modernhoney.com/wp-content/uploads/2019/08/Classic-Chicken-Parmesan-14-scaled.jpg",
+      "ingredients": ["chicken breasts", "breadcrumbs", "parmesan", "tomato sauce", "mozzarella"],
+      "steps": ["Bread chicken breasts with breadcrumbs.", "Pan fry until golden brown.", "Top with tomato sauce and mozzarella.", "Bake until cheese is melted."],
+      "nutrition": {
+        "calories": 550,
+        "protein": 45,
+        "prepTime": 30
+      }
+    },
+    
+    {
+      "name": "Caesar Salad",
+      "description": "Romaine lettuce with creamy Caesar dressing, croutons and parmesan", 
+      "imageUrl": "https://www.culinaryhill.com/wp-content/uploads/2020/06/Caesar-Salad-Recipe-Culinary-Hill-LR-18.jpg",
+      "ingredients": ["romaine lettuce", "caesar dressing", "croutons", "parmesan"],
+      "steps": ["Chop romaine lettuce.", "Toss with caesar dressing.", "Top with croutons and parmesan."],
+      "nutrition": {
+        "calories": 250,
+        "protein": 10,
+        "prepTime": 10  
+      }
+    },
+    
+    {
+      "name": "Tacos",
+      "description": "Soft tortilla shells filled with seasoned ground beef, lettuce, cheese and salsa",
+      "imageUrl": "https://www.thewholesomedish.com/wp-content/uploads/2018/07/Best-Ground-Beef-Tacos-550-500x375.jpg",
+      "ingredients": ["tortillas", "ground beef", "lettuce", "cheese", "salsa"],  
+      "steps": ["Cook ground beef with taco seasoning.", "Warm tortillas.", "Fill with beef, lettuce, cheese and salsa."],
+      "nutrition": {
+        "calories": 500,
+        "protein": 20,
+        "prepTime": 20
+      }
+    },
+    
+    {
+      "name": "Pasta Alfredo",
+      "description": "Fettuccine pasta tossed in a rich, creamy parmesan cheese sauce",
+      "imageUrl": "https://cafedelites.com/wp-content/uploads/2020/12/Fettuccine-alfredo-IMAGE-24.jpg",
+      "ingredients": ["fettuccine", "butter", "cream", "parmesan"],
+      "steps": ["Cook pasta according to package directions.", "Melt butter in a pan.", "Add cream and parmesan and cook until thick and creamy.", "Toss pasta with sauce."],
+      "nutrition": {
+        "calories": 800,
+        "protein": 15,
+        "prepTime": 15
+      }
+    },
+  
+    {
+      "name": "Cheese Pizza", 
+      "description": "Crispy crust with tomato sauce and mozzarella cheese",
+      "imageUrl": "https://truffle-assets.imgix.net/655ce202-862-butternut-pizza-landscapeThumbnailClean.png",
+      "ingredients": ["pizza dough", "tomato sauce", "mozzarella"], 
+      "steps": ["Stretch dough into rounds.", "Top with sauce and cheese.", "Bake until crust is crispy and cheese melted."],
+      "nutrition": {
+        "calories": 700,
+        "protein": 20,
+        "prepTime": 40
+      }
+    },
+    
+    {
+      "name": "Hamburger",
+      "description": "Juicy beef patty with lettuce, tomato, onion and cheese on a bun",
+      "imageUrl": "https://www.thespruceeats.com/thmb/akVm7FwOzZdZsG8t6YM6ZOJ6wjY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/perfect-burger-recipe-471784-hero-01-bce7040da02644caa663116d61077f7e.jpg",
+      "ingredients": ["ground beef", "hamburger buns", "lettuce", "tomato", "onion", "cheese"],
+      "steps": ["Form ground beef into patties and grill.", "Toast buns.", "Place patty on bun and top with lettuce, tomato, onion and cheese."],
+      "nutrition": {
+        "calories": 650,
+        "protein": 25,
+        "prepTime": 15
+      }
+    },
+    
+    {  
+      "name": "Chocolate Chip Cookies",
+      "description": "Chewy cookies filled with chocolate chips",
+      "imageUrl": "https://sugarspunrun.com/wp-content/uploads/2018/09/Best-Chocolate-Chip-Cookies-Recipe-1-of-1-8-500x500.jpg",
+      "ingredients": ["flour", "butter", "sugar", "eggs", "chocolate chips"],
+      "steps": ["Cream butter and sugar.", "Beat in eggs.", "Stir in flour and chocolate chips.", "Scoop dough and bake."],
+      "nutrition": {
+        "calories": 200,
+        "protein": 3,
+        "prepTime": 30
+      }
+    },
+    
+    {
+      "name": "Chicken Fried Rice",
+      "description": "Rice stir-fried with chicken, vegetables and egg",
+      "imageUrl": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/12/Chicken-Fried-Rice-19.jpg",
+      "ingredients": ["rice", "chicken", "vegetables", "egg", "soy sauce"],
+      "steps": ["Cook rice.", "Stir fry chicken and vegetables.", "Add rice and stir fry.", "Scramble egg and mix in.", "Season with soy sauce."],
+      "nutrition": {
+        "calories": 450,
+        "protein": 25,
+        "prepTime": 30
+      }
+    }
+  ]
