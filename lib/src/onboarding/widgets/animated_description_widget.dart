@@ -15,21 +15,15 @@ class AnimatedDescriptionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      bottom: 110,
-      child: Container(
-        width: width,
-        padding: const EdgeInsets.symmetric(horizontal: 35),
-        child: const Text(
-            "More than 20 thousands recipes of healthy and delicious food",
-            maxLines: 2,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              height: 1.4,
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            )),
-      ),
+    return Container(
+      width: width,
+      padding: const EdgeInsets.symmetric(horizontal: 40),
+      child: const Text(
+          "More than 20 thousands recipes of healthy and delicious food",
+          maxLines: 2,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              height: 1.4, fontSize: 17, fontWeight: FontWeight.w700)),
     )
         .animate()
         .slideY(

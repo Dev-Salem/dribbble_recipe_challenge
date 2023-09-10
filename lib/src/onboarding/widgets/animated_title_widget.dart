@@ -16,25 +16,21 @@ class AnimatedTitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      bottom: 175,
-      child: SizedBox(
-        width: width,
-        child: const Text.rich(
-          TextSpan(
-              style: TextStyle(
-                fontSize: 35,
-                fontWeight: FontWeight.bold,
+    return SizedBox(
+      width: width,
+      child: const Text.rich(
+        TextSpan(
+            style: TextStyle(
+              fontSize: 36,
+              fontWeight: FontWeight.bold,
+            ),
+            children: [
+              TextSpan(
+                text: 'Find the perfect recipe ',
               ),
-              children: [
-                TextSpan(
-                  text: 'Find the perfect recipe ',
-                ),
-                TextSpan(
-                    text: 'everyday', style: TextStyle(color: Colors.lime)),
-              ]),
-          textAlign: TextAlign.center,
-        ),
+              TextSpan(text: 'everyday', style: TextStyle(color: Colors.lime)),
+            ]),
+        textAlign: TextAlign.center,
       ),
     )
         .animate()

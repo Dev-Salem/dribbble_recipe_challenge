@@ -18,11 +18,10 @@ class AnimatedButtonWidget extends StatelessWidget {
     return Stack(
       children: [
         Positioned(
-          bottom: 20,
           child: Container(
-            width: width * 0.8,
+            width: width,
             height: 70,
-            margin: EdgeInsets.symmetric(horizontal: width * 0.1),
+            margin: const EdgeInsets.symmetric(horizontal: 30),
             decoration: BoxDecoration(
                 color: Colors.amberAccent,
                 borderRadius: BorderRadius.circular(50)),
@@ -34,10 +33,9 @@ class AnimatedButtonWidget extends StatelessWidget {
             duration: buttonPlayDuration,
             curve: Curves.easeInOutCubic),
         Positioned(
-          bottom: 45,
           child: Container(
             width: width,
-            padding: const EdgeInsets.symmetric(horizontal: 35),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
             child: const Text("Get Started",
                 maxLines: 2,
                 textAlign: TextAlign.center,

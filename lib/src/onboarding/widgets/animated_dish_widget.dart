@@ -24,6 +24,41 @@ class AnimatedDishWidget extends StatelessWidget {
             angle: 2 * pi * 0.85,
             child: Image.asset(
               Assets.leaves,
+              height: 200,
+            ),
+          ),
+        )
+            .animate()
+            .scaleXY(
+                delay: leavesDelayDuration,
+                begin: 0,
+                end: 1,
+                duration: dishPlayDuration,
+                curve: Curves.decelerate)
+            .slide(begin: const Offset(0.7, -0.4), end: Offset.zero),
+        // Positioned(
+        //   top: 140,
+        //   right: -120,
+        //   child: Image.asset(
+        //     Assets.blackPepper,
+        //     height: 140,
+        //   ),
+        // )
+        //     .animate()
+        //     .scaleXY(
+        //         delay: leavesDelayDuration - 200.ms,
+        //         begin: 0,
+        //         end: 1,
+        //         duration: dishPlayDuration - 300.ms,
+        //         curve: Curves.decelerate)
+        //     .slide(begin: const Offset(0.7, -0.4), end: Offset.zero),
+        Positioned(
+          top: 300,
+          left: -30,
+          child: Transform.rotate(
+            angle: 2 * pi * 0.85,
+            child: Image.asset(
+              Assets.leaves,
               height: 150,
             ),
           ),
