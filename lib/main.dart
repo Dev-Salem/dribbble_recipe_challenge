@@ -15,7 +15,9 @@ class DribbleChallenge extends StatelessWidget {
     return MaterialApp(
       home: const OnBoardingScreen(),
       theme: FlexThemeData.light(scheme: FlexScheme.ebonyClay),
-      darkTheme: FlexThemeData.dark(scheme: FlexScheme.ebonyClay),
+      darkTheme: FlexThemeData.dark(scheme: FlexScheme.ebonyClay)
+      //.copyWith(textTheme: GoogleFonts.ubuntuTextTheme())
+      ,
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
     );
