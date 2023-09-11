@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:dribbble_challenge/src/core/constants/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -26,9 +27,9 @@ class AnimatedTitleWidget extends StatelessWidget {
             ),
             children: [
               TextSpan(
-                text: 'Find the perfect recipe ',
+                text: Strings.onBoardingTitle,
               ),
-              TextSpan(text: 'everyday', style: TextStyle(color: Colors.lime)),
+              TextSpan(text: ' everyday', style: TextStyle(color: Colors.lime)),
             ]),
         textAlign: TextAlign.center,
       ),

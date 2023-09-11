@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:dribbble_challenge/src/core/constants/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -18,8 +19,7 @@ class AnimatedDescriptionWidget extends StatelessWidget {
     return Container(
       width: width,
       padding: const EdgeInsets.symmetric(horizontal: 40),
-      child: const Text(
-          "More than 20 thousands recipes of healthy and delicious food",
+      child: const Text(Strings.onBoardingSlogan,
           maxLines: 2,
           textAlign: TextAlign.center,
           style: TextStyle(

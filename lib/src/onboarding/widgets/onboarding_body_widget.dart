@@ -5,8 +5,27 @@ import 'package:dribbble_challenge/src/onboarding/widgets/animated_title_widget.
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
-class OnBoardingBodyWidget extends StatelessWidget {
+class OnBoardingBodyWidget extends StatefulWidget {
   const OnBoardingBodyWidget({super.key});
+
+  @override
+  State<OnBoardingBodyWidget> createState() => _OnBoardingBodyWidgetState();
+}
+
+class _OnBoardingBodyWidgetState extends State<OnBoardingBodyWidget>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
+  @override
+  void initState() {
+    _controller = AnimationController(vsync: this);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,13 +68,27 @@ class OnBoardingBodyWidget extends StatelessWidget {
             height: constraint.maxHeight * 0.03,
           ),
           SizedBox(
-            child: AnimatedButtonWidget(
-                width: constraint.maxWidth,
-                buttonDelayDuration: buttonDelayDuration,
-                buttonPlayDuration: mainPlayDuration),
+            child: GestureDetector(
+              onTap: () {
+                print('k');
+                setState(() {
+                  _controller.forward();
+                });
+              },
+              child: AnimatedButtonWidget(
+                  width: constraint.maxWidth,
+                  buttonDelayDuration: buttonDelayDuration,
+                  buttonPlayDuration: mainPlayDuration),
+            ),
           )
         ],
-      );
+      )
+          .animate(autoPlay: false, controller: _controller)
+          .blurXY(begin: 0, end: 20, duration: 600.ms, curve: Curves.easeInOut)
+          .fadeOut(
+            begin: 1,
+          )
+          .scaleXY(begin: 1, end: 0.4);
     });
   }
 }

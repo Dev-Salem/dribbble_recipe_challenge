@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:dribbble_challenge/src/core/constants/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -36,7 +37,7 @@ class AnimatedButtonWidget extends StatelessWidget {
           child: Container(
             width: width,
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-            child: const Text("Get Started",
+            child: const Text(Strings.onBoardingButton,
                 maxLines: 2,
                 textAlign: TextAlign.center,
                 style: TextStyle(
