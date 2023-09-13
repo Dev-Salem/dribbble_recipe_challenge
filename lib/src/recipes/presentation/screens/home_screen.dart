@@ -5,12 +5,13 @@ import 'package:dribbble_challenge/src/recipes/presentation/widget/animated_name
 import 'package:dribbble_challenge/src/recipes/presentation/widget/animated_selected_category_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
     return AnnotatedScaffold(
         //assetPath: "assets/images/home_screen.png",
         child: LayoutBuilder(builder: (context, constraints) {
