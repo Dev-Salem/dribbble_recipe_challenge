@@ -1,5 +1,6 @@
 [
     {
+      "id": 1,
       "name": "Spaghetti Bolognese",
       "description": "A classic Italian meat sauce served over pasta",
       "imageUrl": "assets/images/spaghetti.png",
@@ -12,6 +13,7 @@
       }
     },
     {
+      "id": 2,
       "name": "Chicken Parmesan", 
       "description": "Breaded chicken breast topped with tomato sauce and mozzarella",
       "imageUrl": "assets/images/chicken.png",
@@ -25,6 +27,7 @@
     },
     
     {
+      "id": 3,
       "name": "Caesar Salad",
       "description": "Romaine lettuce with creamy Caesar dressing, croutons and parmesan", 
       "imageUrl": "assets/images/salad.png",
@@ -38,6 +41,7 @@
     },
     
     {
+      "id": 4,
       "name": "Tacos",
       "description": "Soft tortilla shells filled with seasoned ground beef, lettuce, cheese and salsa",
       "imageUrl": "assets/images/tacos.png",
@@ -51,6 +55,7 @@
     },
     
     {
+      "id": 5,
       "name": "Pasta Alfredo",
       "description": "Fettuccine pasta tossed in a rich, creamy parmesan cheese sauce",
       "imageUrl": "assets/images/alfredo.png",
@@ -64,6 +69,7 @@
     },
   
     {
+      "id": 6,
       "name": "Cheese Pizza", 
       "description": "Crispy crust with tomato sauce and mozzarella cheese",
       "imageUrl": "assets/images/pizza.png",
@@ -77,6 +83,7 @@
     },
     
     {
+      "id": 7,
       "name": "Hamburger",
       "description": "Juicy beef patty with lettuce, tomato, onion and cheese on a bun",
       "imageUrl": "assets/images/burger.png",
@@ -90,6 +97,7 @@
     },
     
     {  
+      "id": 8,
       "name": "Chocolate Chip Cookies",
       "description": "Chewy cookies filled with chocolate chips",
       "imageUrl": "assets/images/cookies.png",
@@ -103,6 +111,7 @@
     },
     
     {
+      "id": 9,
       "name": "Chicken Fried Rice",
       "description": "Rice stir-fried with chicken, vegetables and egg",
       "imageUrl": "assets/images/rice.png",
