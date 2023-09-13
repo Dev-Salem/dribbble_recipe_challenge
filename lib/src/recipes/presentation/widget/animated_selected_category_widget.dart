@@ -20,7 +20,7 @@ class AnimatedSelectedCategoryWidget extends StatelessWidget {
             left: 30,
             child: const Text(
               "2003 Popular",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             ))
         .animate()
         .fadeIn(
