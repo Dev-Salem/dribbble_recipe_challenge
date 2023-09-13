@@ -3,16 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 class AnimatedAvatarWidget extends StatelessWidget {
+  final Duration avatarPlayDuration;
+  final Duration avatarWaitingDuration;
   final BoxConstraints constraints;
   const AnimatedAvatarWidget({
     Key? key,
+    required this.avatarPlayDuration,
+    required this.avatarWaitingDuration,
     required this.constraints,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: constraints.maxHeight * 0.25,
+      top: constraints.maxHeight * 0.28,
       left: constraints.maxWidth * 0.45,
       child: const CircleAvatar(
         radius: 18,
@@ -20,8 +24,11 @@ class AnimatedAvatarWidget extends StatelessWidget {
       )
           .animate()
           .scaleXY(
-              begin: 0, end: 2, duration: 500.ms, curve: Curves.fastOutSlowIn)
-          .then(delay: 400.ms)
+              begin: 0,
+              end: 2,
+              duration: avatarPlayDuration,
+              curve: Curves.easeInOutSine)
+          .then(delay: avatarWaitingDuration)
           .scaleXY(begin: 3, end: 0.8)
           .slide(begin: Offset.zero, end: const Offset(4.1, -5)),
     );

@@ -2,12 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 class AnimatedNameWidget extends StatelessWidget {
-  const AnimatedNameWidget({super.key});
+  final Duration namePlayDuration;
+  final Duration nameDelayDuration;
+  final BoxConstraints constraints;
+  const AnimatedNameWidget(
+      {super.key,
+      required this.namePlayDuration,
+      required this.nameDelayDuration,
+      required this.constraints});
 
   @override
   Widget build(BuildContext context) {
     return Positioned(
         left: 25,
+        top: constraints.maxHeight * 0.025,
         child: const Text(
           "Hello, \nWorld 👋 ",
           maxLines: 2,
@@ -17,8 +25,8 @@ class AnimatedNameWidget extends StatelessWidget {
             .slideX(
                 begin: 0.2,
                 end: 0,
-                duration: 400.ms,
-                delay: 450.ms + 500.ms,
+                duration: namePlayDuration,
+                delay: nameDelayDuration,
                 curve: Curves.fastOutSlowIn)
             .fadeIn());
   }
