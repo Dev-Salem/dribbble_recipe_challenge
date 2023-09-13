@@ -6,9 +6,25 @@ class FoodCategoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
-      height: 50,
-      width: 100,
+      width: 120,
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.white30, width: 2),
+        borderRadius: BorderRadius.circular(25),
+      ),
+      alignment: Alignment.center,
+      child: const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Text(
+            "🔥",
+            style: TextStyle(fontSize: 20),
+          ),
+          Text(
+            "Popular",
+            style: TextStyle(fontSize: 20),
+          )
+        ],
+      ),
     );
   }
 }
