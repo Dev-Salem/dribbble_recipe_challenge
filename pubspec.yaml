@@ -46,6 +46,7 @@ dependencies:
   pixel_perfect: ^1.1.3
   json_annotation: ^4.8.1
   freezed_annotation: ^2.4.1
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_test:
