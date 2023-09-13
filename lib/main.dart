@@ -1,3 +1,4 @@
+import 'package:dribbble_challenge/src/onboarding/onboarding_screen.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/screens/home_screen.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class DribbleChallenge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const HomeScreen(),
+      home: const OnBoardingScreen(),
       onGenerateRoute: (settings) {
         return switch (settings.name) {
           '/' => MaterialPageRoute(builder: (_) => const HomeScreen()),
