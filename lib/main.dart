@@ -23,6 +23,7 @@ class DribbleChallenge extends StatelessWidget {
       },
       theme: FlexThemeData.light(scheme: FlexScheme.ebonyClay),
       darkTheme: FlexThemeData.dark(scheme: FlexScheme.ebonyClay)
+          .copyWith(scaffoldBackgroundColor: const Color(0xff101520))
       //.copyWith(textTheme: GoogleFonts.ubuntuTextTheme())
       ,
       themeMode: ThemeMode.dark,
