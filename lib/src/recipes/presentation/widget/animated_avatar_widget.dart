@@ -29,7 +29,7 @@ class AnimatedAvatarWidget extends StatelessWidget {
               duration: avatarPlayDuration,
               curve: Curves.easeInOutSine)
           .then(delay: avatarWaitingDuration)
-          .scaleXY(begin: 3, end: 0.8)
+          .scaleXY(begin: 3, end: 1)
           .slide(begin: Offset.zero, end: const Offset(4.1, -5)),
     );
   }
