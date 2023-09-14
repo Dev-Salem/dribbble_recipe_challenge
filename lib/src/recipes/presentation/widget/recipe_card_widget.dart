@@ -75,25 +75,27 @@ class RecipeCardWidget extends StatelessWidget {
                           curve: Curves.decelerate)
                       .slideX(begin: 0.2, end: 0),
                 ),
-                Container(
-                  width: constraints.maxWidth * 0.4,
-                  padding: EdgeInsets.only(
-                      top: 10, left: columnCons.maxWidth * 0.04),
-                  child: Text(
-                    recipe.description,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 4,
-                    softWrap: true,
-                    style: const TextStyle(
-                        fontSize: 12,
-                        color: Colors.white60,
-                        fontWeight: FontWeight.w400),
-                  ).animate().scaleXY(
-                      begin: 0,
-                      end: 1,
-                      delay: 300.ms,
-                      duration: 400.ms,
-                      curve: Curves.decelerate),
+                Expanded(
+                  child: Container(
+                    width: constraints.maxWidth * 0.4,
+                    padding: EdgeInsets.only(
+                        top: 10, left: columnCons.maxWidth * 0.04, bottom: 10),
+                    child: Text(
+                      recipe.description,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 4,
+                      softWrap: true,
+                      style: const TextStyle(
+                          fontSize: 12,
+                          color: Colors.white60,
+                          fontWeight: FontWeight.w400),
+                    ).animate().scaleXY(
+                        begin: 0,
+                        end: 1,
+                        delay: 300.ms,
+                        duration: 400.ms,
+                        curve: Curves.decelerate),
+                  ),
                 ),
               ],
             )
