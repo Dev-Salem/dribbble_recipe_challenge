@@ -3,6 +3,7 @@ import 'package:dribbble_challenge/src/recipes/presentation/screens/home_screen.
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const ProviderScope(child: DribbleChallenge()));
@@ -21,11 +22,10 @@ class DribbleChallenge extends StatelessWidget {
           _ => MaterialPageRoute(builder: (_) => const HomeScreen())
         };
       },
-      theme: FlexThemeData.light(scheme: FlexScheme.ebonyClay),
+      theme: FlexThemeData.light(scheme: FlexScheme.ebonyClay)
+          .copyWith(textTheme: GoogleFonts.ubuntuTextTheme()),
       darkTheme: FlexThemeData.dark(scheme: FlexScheme.ebonyClay)
-          .copyWith(scaffoldBackgroundColor: const Color(0xff101520))
-      //.copyWith(textTheme: GoogleFonts.ubuntuTextTheme())
-      ,
+          .copyWith(scaffoldBackgroundColor: const Color(0xff101520)),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
     );

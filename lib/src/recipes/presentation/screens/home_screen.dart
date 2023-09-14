@@ -2,18 +2,38 @@ import 'package:dribbble_challenge/src/core/widget/annotated_scaffold.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/widget/animated_avatar_widget.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/widget/animated_category_list.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/widget/animated_name_widget.dart';
+import 'package:dribbble_challenge/src/recipes/presentation/widget/animated_recipes_list.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/widget/animated_selected_category_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class HomeScreen extends ConsumerWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context, ref) {
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  bool _showRecipeList = false;
+  void changeListVisibility() {
+    setState(() {
+      _showRecipeList = true;
+    });
+  }
+
+  @override
+  void initState() {
+    Future.delayed(2550.ms, () => changeListVisibility());
+    super.initState();
+  }
+
+  @override
+  Widget build(
+    BuildContext context,
+  ) {
     return AnnotatedScaffold(
-        //assetPath: "assets/images/home_screen.png",
+        // assetPath: "assets/images/home_screen.png",
         child: LayoutBuilder(builder: (context, constraints) {
       final avatarPlayDuration = 500.ms;
       final avatarWaitingDuration = 400.ms;
@@ -26,6 +46,8 @@ class HomeScreen extends ConsumerWidget {
       final selectedCategoryPlayDuration = 400.ms;
       final selectedCategoryDelayDuration =
           categoryListDelayDuration + categoryListPlayDuration;
+      print(selectedCategoryDelayDuration + selectedCategoryPlayDuration);
+
       return Stack(
         children: [
           AnimatedAvatarWidget(
@@ -47,7 +69,14 @@ class HomeScreen extends ConsumerWidget {
             constraints: constraints,
             selectedCategoryPlayDuration: selectedCategoryPlayDuration,
             selectedCategoryDelayDuration: selectedCategoryDelayDuration,
-          )
+          ),
+          Positioned.fill(
+              top: constraints.maxHeight * 0.30,
+              child: _showRecipeList
+                  ? AnimatedRecipesList(
+                      constraints: constraints,
+                    )
+                  : const SizedBox())
         ],
       );
     }));

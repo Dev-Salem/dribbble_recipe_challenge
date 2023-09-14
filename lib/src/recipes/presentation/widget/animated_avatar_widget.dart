@@ -16,7 +16,7 @@ class AnimatedAvatarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: constraints.maxHeight * 0.28,
+      top: constraints.maxHeight * 0.25,
       left: constraints.maxWidth * 0.45,
       child: const CircleAvatar(
         radius: 18,
