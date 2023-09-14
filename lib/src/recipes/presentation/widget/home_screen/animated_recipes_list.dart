@@ -1,12 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_shimmer_card.dart';
+import 'package:dribbble_challenge/src/recipes/presentation/widget/home_screen/recipe_shimmer_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import 'package:dribbble_challenge/src/recipes/data/recipe_repository.dart';
 import 'package:dribbble_challenge/src/recipes/domain/recipe.dart';
-import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_card_widget.dart';
 
 class AnimatedRecipesList extends ConsumerWidget {
   final BoxConstraints constraints;
@@ -19,8 +17,10 @@ class AnimatedRecipesList extends ConsumerWidget {
   Widget build(BuildContext context, ref) {
     final result = ref.watch(recipesProvider);
     return result.when(
-        data: (recipes) =>
-            _LoadedRecipeList(recipes: recipes, constraints: constraints),
+        data: (recipes) => _LoadedRecipeList(
+              recipes: recipes,
+              constraints: constraints,
+            ),
         error: (e, a) => Center(
               child: Text("Error: ${e.toString()}"),
             ),
@@ -61,11 +61,7 @@ class _LoadedRecipeList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: recipes.length,
-      itemBuilder: (context, index) => RecipeCardWidget(
-        recipe: recipes[index],
-        index: index,
-        constraints: constraints,
-      ).animate().slideX(
+      itemBuilder: (context, index) => const SizedBox().animate().slideX(
           duration: 300.ms,
           delay: (index * 0.3 * 200).ms,
           begin: 1,

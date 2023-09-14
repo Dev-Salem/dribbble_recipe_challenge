@@ -39,6 +39,7 @@ class _OnBoardingBodyWidgetState extends State<OnBoardingBodyWidget>
   @override
   void dispose() {
     _controller.dispose();
+    _controller.removeListener(() {});
     super.dispose();
   }
 
