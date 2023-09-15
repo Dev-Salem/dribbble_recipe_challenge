@@ -5,12 +5,10 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:dribbble_challenge/src/recipes/domain/recipe.dart';
 
 class RecipeCardWidget extends StatelessWidget {
-  final int index;
   final Recipe recipe;
   final BoxConstraints constraints;
   const RecipeCardWidget({
     Key? key,
-    required this.index,
     required this.recipe,
     required this.constraints,
   }) : super(key: key);
@@ -19,6 +17,7 @@ class RecipeCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: constraints.maxHeight * 0.24,
+      width: constraints.maxWidth,
       margin: const EdgeInsets.fromLTRB(10, 15, 10, 0),
       decoration: BoxDecoration(
           color: const Color(0xff182032),
@@ -48,7 +47,7 @@ class RecipeCardWidget extends StatelessWidget {
                   child: Text(
                     "${recipe.nutrition["calories"]}cal \t\t\t\t${recipe.nutrition["protein"]}protein",
                     style:
-                        TextStyle(fontSize: 12, color: Colors.amberAccent[100]),
+                        TextStyle(fontSize: 12, color: Colors.amber.shade100),
                   ).animate().scaleXY(
                       begin: 0,
                       end: 1,

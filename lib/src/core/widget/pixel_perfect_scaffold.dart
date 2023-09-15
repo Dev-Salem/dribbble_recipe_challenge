@@ -16,7 +16,7 @@ class PixelPerfectScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return PixelPerfect(
         assetPath: assetPath,
-        scale: 1.65,
+        scale: 1.70,
         child: AnnotatedScaffold(child: child));
   }
 }

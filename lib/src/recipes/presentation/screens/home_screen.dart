@@ -1,8 +1,8 @@
 import 'package:dribbble_challenge/src/core/widget/annotated_scaffold.dart';
+import 'package:dribbble_challenge/src/recipes/presentation/screens/animated_recipes_widget.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/widget/home_screen/animated_avatar_widget.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/widget/home_screen/animated_category_list.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/widget/home_screen/animated_name_widget.dart';
-import 'package:dribbble_challenge/src/recipes/presentation/widget/home_screen/animated_recipes_list.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/widget/home_screen/animated_selected_category_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Positioned.fill(
               top: constraints.maxHeight * 0.30,
               child: _showRecipeList
-                  ? AnimatedRecipesList(
+                  ? AnimatedRecipesWidget(
                       constraints: constraints,
                     )
                   : const SizedBox())
