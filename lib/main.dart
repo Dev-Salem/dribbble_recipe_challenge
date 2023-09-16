@@ -1,3 +1,4 @@
+import 'package:dribbble_challenge/src/core/animation/page_transation.dart';
 import 'package:dribbble_challenge/src/onboarding/onboarding_screen.dart';
 import 'package:dribbble_challenge/src/recipes/domain/recipe.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/screens/home_screen.dart';
@@ -19,12 +20,14 @@ class DribbleChallenge extends StatelessWidget {
       home: const OnBoardingScreen(),
       onGenerateRoute: (settings) {
         return switch (settings.name) {
-          '/' => MaterialPageRoute(builder: (_) => const HomeScreen()),
-          'recipe_details' => MaterialPageRoute(
-              builder: (_) =>
+          'home' => NoAnimationTransition(
+              builder: (context) => const HomeScreen(),
+            ),
+          'recipe_details' => NoAnimationTransition(
+              builder: (context) =>
                   RecipeDetailsScreen(recipe: settings.arguments as Recipe),
             ),
-          _ => MaterialPageRoute(builder: (_) => const HomeScreen())
+          _ => NoAnimationTransition(builder: (context) => const HomeScreen())
         };
       },
       theme: FlexThemeData.light(scheme: FlexScheme.ebonyClay),
