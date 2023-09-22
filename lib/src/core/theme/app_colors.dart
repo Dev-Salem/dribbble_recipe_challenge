@@ -5,4 +5,5 @@ class AppColors {
   static final bodySmallTextColor = Colors.amberAccent[100];
   static const scaffoldBackgroundColor = Color(0xff101520);
   static const infoTextColor = Colors.white60;
+  static const onBoardingButtonColor = Colors.amberAccent;
 }

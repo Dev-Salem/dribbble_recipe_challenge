@@ -17,26 +17,26 @@ class AnimatedDescriptionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width,
-      padding: const EdgeInsets.symmetric(horizontal: 40),
-      child: const Text(Strings.onBoardingSlogan,
+        width: width,
+        padding: const EdgeInsets.symmetric(horizontal: 40),
+        child: Text(
+          Strings.onBoardingSlogan,
           maxLines: 2,
           textAlign: TextAlign.center,
-          style: TextStyle(
-              height: 1.4, fontSize: 17, fontWeight: FontWeight.w700)),
-    )
-        .animate()
-        .slideY(
-            begin: 0.1,
-            end: 0,
-            delay: 350.ms + 400.ms,
-            duration: descriptionPlayDuration,
-            curve: Curves.easeInOutCubic)
-        .scaleXY(
-            begin: 0,
-            end: 1,
-            delay: descriptionDelayDuration,
-            duration: descriptionPlayDuration,
-            curve: Curves.easeInOutCubic);
+          style: Theme.of(context).textTheme.titleMedium,
+        )
+            .animate()
+            .slideY(
+                begin: 0.1,
+                end: 0,
+                delay: 350.ms + 400.ms,
+                duration: descriptionPlayDuration,
+                curve: Curves.easeInOutCubic)
+            .scaleXY(
+                begin: 0,
+                end: 1,
+                delay: descriptionDelayDuration,
+                duration: descriptionPlayDuration,
+                curve: Curves.easeInOutCubic));
   }
 }

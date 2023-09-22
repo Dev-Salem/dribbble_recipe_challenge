@@ -1,9 +1,9 @@
-import 'package:dribbble_challenge/src/core/animation/page_transation.dart';
+import 'package:dribbble_challenge/src/core/animation/page_transition.dart';
+import 'package:dribbble_challenge/src/core/theme/app_theme.dart';
 import 'package:dribbble_challenge/src/onboarding/onboarding_screen.dart';
 import 'package:dribbble_challenge/src/recipes/domain/recipe.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/screens/home_screen.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/screens/recipe_details_screen.dart';
-import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -30,9 +30,8 @@ class DribbleChallenge extends StatelessWidget {
           _ => NoAnimationTransition(builder: (context) => const HomeScreen())
         };
       },
-      theme: FlexThemeData.light(scheme: FlexScheme.ebonyClay),
-      darkTheme: FlexThemeData.dark(scheme: FlexScheme.ebonyClay)
-          .copyWith(scaffoldBackgroundColor: const Color(0xff101520)),
+      theme: mainTheme,
+      darkTheme: mainTheme,
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
     );

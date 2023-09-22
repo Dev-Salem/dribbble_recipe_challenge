@@ -19,19 +19,20 @@ class AnimatedTitleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width,
-      child: const Text.rich(
-        TextSpan(
-            style: TextStyle(
-              fontSize: 36,
-              fontWeight: FontWeight.bold,
-            ),
-            children: [
-              TextSpan(
-                text: Strings.onBoardingTitle,
-              ),
-              TextSpan(text: ' everyday', style: TextStyle(color: Colors.lime)),
-            ]),
-        textAlign: TextAlign.center,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: Text.rich(
+          TextSpan(
+              style: Theme.of(context).textTheme.displaySmall,
+              children: const [
+                TextSpan(
+                  text: Strings.onBoardingTitle,
+                ),
+                TextSpan(
+                    text: ' everyday', style: TextStyle(color: Colors.lime)),
+              ]),
+          textAlign: TextAlign.center,
+        ),
       ),
     )
         .animate()

@@ -16,10 +16,10 @@ class AnimatedNameWidget extends StatelessWidget {
     return Positioned(
         left: 25,
         top: constraints.maxHeight * 0.025,
-        child: const Text(
+        child: Text(
           "Hello, \nWorld 👋 ",
           maxLines: 2,
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+          style: Theme.of(context).textTheme.headlineMedium,
         )
             .animate()
             .slideX(

@@ -37,15 +37,10 @@ class AnimatedButtonWidget extends StatelessWidget {
           child: Container(
             width: width,
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-            child: const Text(Strings.onBoardingButton,
+            child: Text(Strings.onBoardingButton,
                 maxLines: 2,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  height: 1.4,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                )),
+                style: Theme.of(context).textTheme.bodyLarge),
           ),
         ).animate().scaleXY(
             begin: 0,

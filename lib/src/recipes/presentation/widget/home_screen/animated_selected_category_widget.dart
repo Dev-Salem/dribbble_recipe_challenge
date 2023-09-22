@@ -18,9 +18,9 @@ class AnimatedSelectedCategoryWidget extends StatelessWidget {
     return Positioned(
             top: constraints.maxHeight * 0.25,
             left: 30,
-            child: const Text(
+            child: Text(
               "2003 Popular",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+              style: Theme.of(context).textTheme.titleLarge,
             ))
         .animate()
         .fadeIn(
