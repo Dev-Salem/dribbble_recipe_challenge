@@ -47,6 +47,10 @@ dependencies:
   json_annotation: ^4.8.1
   freezed_annotation: ^2.4.1
   shimmer: ^3.0.0
+  bottom_sheet: ^4.0.0
+  image_picker: ^1.0.4
+  sliding_up_panel: ^2.0.0+1
+  timeline_tile: ^2.0.0
 
 dev_dependencies:
   flutter_test:
