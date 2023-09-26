@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:dribbble_challenge/src/core/widget/annotated_scaffold.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_details/animated_app_bar_widget.dart';
+import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_details/time_line_sliding_panel.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_details/animated_dish_widget.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_details/animated_info_widget.dart';
 import 'package:flutter/material.dart';
@@ -24,10 +25,43 @@ class RecipeDetailsScreen extends StatelessWidget {
         final appBarDelayTime = 400.ms;
         final infoDelayTime = appBarPlayTime + appBarDelayTime - 200.ms;
         final infoPlayTime = 500.ms;
-        return Column(
+        return TimeLineSlidingPanel(
+            recipe: recipe,
+            screenHeight: constraints.maxHeight,
+            body: Column(
+              children: [
+                AnimatedAppBarWidget(
+                  name: recipe.name,
+                  appBarPlayTime: appBarPlayTime,
+                  appBarDelayTime: appBarDelayTime,
+                ),
+                SizedBox(
+                  height: constraints.maxHeight * 0.04,
+                ),
+                AnimatedDishWidget(
+                  constraints: constraints,
+                  imageUrl: recipe.imageUrl,
+                ),
+                SizedBox(
+                  height: constraints.maxHeight * 0.06,
+                ),
+                AnimatedInfoWidget(
+                    nutrition: recipe.nutrition,
+                    infoDelayTime: infoDelayTime,
+                    infoPlayTime: infoPlayTime,
+                    constraints: constraints),
+              ],
+            ));
+      }),
+    );
+  }
+}
+
+/*
+Column(
           children: [
             AnimatedAppBarWidget(
-              name: recipe.name,
+              name: widget.recipe.name,
               appBarPlayTime: appBarPlayTime,
               appBarDelayTime: appBarDelayTime,
             ),
@@ -36,13 +70,13 @@ class RecipeDetailsScreen extends StatelessWidget {
             ),
             AnimatedDishWidget(
               constraints: constraints,
-              imageUrl: recipe.imageUrl,
+              imageUrl: widget.recipe.imageUrl,
             ),
             SizedBox(
               height: constraints.maxHeight * 0.06,
             ),
             AnimatedInfoWidget(
-                nutrition: recipe.nutrition,
+                nutrition: widget.recipe.nutrition,
                 infoDelayTime: infoDelayTime,
                 infoPlayTime: infoPlayTime,
                 constraints: constraints),
@@ -51,7 +85,4 @@ class RecipeDetailsScreen extends StatelessWidget {
             ),
           ],
         );
-      }),
-    );
-  }
-}
+*/
