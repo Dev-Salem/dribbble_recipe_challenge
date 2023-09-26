@@ -25,6 +25,7 @@ mixin _$Recipe {
   String get imageUrl => throw _privateConstructorUsedError;
   Map<String, num> get nutrition => throw _privateConstructorUsedError;
   List<String> get ingredients => throw _privateConstructorUsedError;
+  List<String> get steps => throw _privateConstructorUsedError;
   String get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -43,6 +44,7 @@ abstract class $RecipeCopyWith<$Res> {
       String imageUrl,
       Map<String, num> nutrition,
       List<String> ingredients,
+      List<String> steps,
       String id});
 }
 
@@ -64,6 +66,7 @@ class _$RecipeCopyWithImpl<$Res, $Val extends Recipe>
     Object? imageUrl = null,
     Object? nutrition = null,
     Object? ingredients = null,
+    Object? steps = null,
     Object? id = null,
   }) {
     return _then(_value.copyWith(
@@ -87,6 +90,10 @@ class _$RecipeCopyWithImpl<$Res, $Val extends Recipe>
           ? _value.ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      steps: null == steps
+          ? _value.steps
+          : steps // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -107,6 +114,7 @@ abstract class _$$_RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
       String imageUrl,
       Map<String, num> nutrition,
       List<String> ingredients,
+      List<String> steps,
       String id});
 }
 
@@ -125,6 +133,7 @@ class __$$_RecipeCopyWithImpl<$Res>
     Object? imageUrl = null,
     Object? nutrition = null,
     Object? ingredients = null,
+    Object? steps = null,
     Object? id = null,
   }) {
     return _then(_$_Recipe(
@@ -148,6 +157,10 @@ class __$$_RecipeCopyWithImpl<$Res>
           ? _value._ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      steps: null == steps
+          ? _value._steps
+          : steps // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -165,9 +178,11 @@ class _$_Recipe implements _Recipe {
       required this.imageUrl,
       required final Map<String, num> nutrition,
       required final List<String> ingredients,
+      required final List<String> steps,
       required this.id})
       : _nutrition = nutrition,
-        _ingredients = ingredients;
+        _ingredients = ingredients,
+        _steps = steps;
 
   factory _$_Recipe.fromJson(Map<String, dynamic> json) =>
       _$$_RecipeFromJson(json);
@@ -194,12 +209,20 @@ class _$_Recipe implements _Recipe {
     return EqualUnmodifiableListView(_ingredients);
   }
 
+  final List<String> _steps;
+  @override
+  List<String> get steps {
+    if (_steps is EqualUnmodifiableListView) return _steps;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_steps);
+  }
+
   @override
   final String id;
 
   @override
   String toString() {
-    return 'Recipe(name: $name, description: $description, imageUrl: $imageUrl, nutrition: $nutrition, ingredients: $ingredients, id: $id)';
+    return 'Recipe(name: $name, description: $description, imageUrl: $imageUrl, nutrition: $nutrition, ingredients: $ingredients, steps: $steps, id: $id)';
   }
 
   @override
@@ -216,6 +239,7 @@ class _$_Recipe implements _Recipe {
                 .equals(other._nutrition, _nutrition) &&
             const DeepCollectionEquality()
                 .equals(other._ingredients, _ingredients) &&
+            const DeepCollectionEquality().equals(other._steps, _steps) &&
             (identical(other.id, id) || other.id == id));
   }
 
@@ -228,6 +252,7 @@ class _$_Recipe implements _Recipe {
       imageUrl,
       const DeepCollectionEquality().hash(_nutrition),
       const DeepCollectionEquality().hash(_ingredients),
+      const DeepCollectionEquality().hash(_steps),
       id);
 
   @JsonKey(ignore: true)
@@ -251,6 +276,7 @@ abstract class _Recipe implements Recipe {
       required final String imageUrl,
       required final Map<String, num> nutrition,
       required final List<String> ingredients,
+      required final List<String> steps,
       required final String id}) = _$_Recipe;
 
   factory _Recipe.fromJson(Map<String, dynamic> json) = _$_Recipe.fromJson;
@@ -265,6 +291,8 @@ abstract class _Recipe implements Recipe {
   Map<String, num> get nutrition;
   @override
   List<String> get ingredients;
+  @override
+  List<String> get steps;
   @override
   String get id;
   @override

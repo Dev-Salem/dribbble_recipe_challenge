@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: non_constant_identifier_names
-
 part of 'recipe.dart';
 
 // **************************************************************************
@@ -16,6 +14,7 @@ _$_Recipe _$$_RecipeFromJson(Map<String, dynamic> json) => _$_Recipe(
       ingredients: (json['ingredients'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
+      steps: (json['steps'] as List<dynamic>).map((e) => e as String).toList(),
       id: json['id'] as String,
     );
 
@@ -25,5 +24,6 @@ Map<String, dynamic> _$$_RecipeToJson(_$_Recipe instance) => <String, dynamic>{
       'imageUrl': instance.imageUrl,
       'nutrition': instance.nutrition,
       'ingredients': instance.ingredients,
+      'steps': instance.steps,
       'id': instance.id,
     };

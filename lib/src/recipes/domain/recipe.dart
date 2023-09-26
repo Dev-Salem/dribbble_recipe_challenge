@@ -11,6 +11,7 @@ class Recipe with _$Recipe {
       required String imageUrl,
       required Map<String, num> nutrition,
       required List<String> ingredients,
+      required List<String> steps,
       required String id}) = _Recipe;
 
   factory Recipe.fromJson(Map<String, dynamic> json) => _$RecipeFromJson(json);
