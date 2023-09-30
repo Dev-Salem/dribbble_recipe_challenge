@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:dribbble_challenge/src/core/constants/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -18,9 +19,10 @@ class AnimatedAvatarWidget extends StatelessWidget {
     return Positioned(
       top: 215,
       left: constraints.maxWidth * 0.45,
-      child: const CircleAvatar(
+      child: CircleAvatar(
         radius: 18,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blue.shade900,
+        child: Image.asset(Assets.profileImage),
       )
           .animate()
           .scaleXY(
