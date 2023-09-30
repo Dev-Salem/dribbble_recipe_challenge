@@ -19,7 +19,7 @@ class AnimatedSelectedCategoryWidget extends StatelessWidget {
             top: constraints.maxHeight * 0.25,
             left: 30,
             child: Text(
-              "2003 Popular",
+              "10 Recipes",
               style: Theme.of(context).textTheme.titleLarge,
             ))
         .animate()
