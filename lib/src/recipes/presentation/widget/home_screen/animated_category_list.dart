@@ -24,12 +24,12 @@ class AnimatedCategoryList extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.only(left: 15),
           children: List.generate(
-                  4,
-                  (index) => const Padding(
-                        padding: EdgeInsets.only(
+                  _categories.length,
+                  (index) => Padding(
+                        padding: const EdgeInsets.only(
                           left: 10,
                         ),
-                        child: FoodCategoryWidget(),
+                        child: _categories[index],
                       ))
               .animate(interval: 100.ms, delay: categoryListDelayDuration)
               .slideX(
@@ -40,3 +40,10 @@ class AnimatedCategoryList extends StatelessWidget {
         ));
   }
 }
+
+const _categories = [
+  FoodCategoryWidget(icon: "🔥", name: "Popular"),
+  FoodCategoryWidget(icon: "🥦", name: "Healthy"),
+  FoodCategoryWidget(icon: "🍲", name: "Soup"),
+  FoodCategoryWidget(icon: "🍿", name: "Snacks"),
+];
