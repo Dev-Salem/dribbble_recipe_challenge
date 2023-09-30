@@ -1,14 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_details/ingredients_card_list.dart';
-import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_details/time_line_widget.dart';
+import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_details/animated_sliding_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:sliding_up_panel/sliding_up_panel.dart';
-
-import 'package:dribbble_challenge/src/core/theme/app_colors.dart';
 import 'package:dribbble_challenge/src/recipes/domain/recipe.dart';
 
-class TimeLineSlidingPanel extends StatelessWidget {
+class TimeLineSlidingPanel extends StatefulWidget {
   final Recipe recipe;
   final Widget body;
   final double screenHeight;
@@ -20,31 +16,57 @@ class TimeLineSlidingPanel extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<TimeLineSlidingPanel> createState() => _TimeLineSlidingPanelState();
+}
+
+class _TimeLineSlidingPanelState extends State<TimeLineSlidingPanel>
+    with TickerProviderStateMixin {
+  late final AnimationController _controller;
+  late final Animation<double> _animation;
+  late final CurvedAnimation _curvedAnimation;
+  late final AnimationController _ingridController;
+  final baseDelayTime = 2000.ms;
+  final slidingDuration = 600.ms;
+
+  @override
+  void initState() {
+    initializeControllers();
+    playAnimations();
+    super.initState();
+  }
+
+  void initializeControllers() {
+    _ingridController = AnimationController(vsync: this);
+    _controller = AnimationController(vsync: this, duration: slidingDuration);
+    _curvedAnimation =
+        CurvedAnimation(parent: _controller, curve: Curves.easeInOutSine);
+    _animation = Tween<double>(begin: 0, end: 0.4).animate(_curvedAnimation);
+  }
+
+  void playAnimations() {
+    Future.delayed(baseDelayTime, () {
+      _controller.forward();
+    });
+    Future.delayed(baseDelayTime + 400.ms, () => _ingridController.forward());
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    _curvedAnimation.dispose();
+    _ingridController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return SlidingUpPanel(
-      margin: const EdgeInsets.symmetric(horizontal: 10),
-      color: AppColors.cardColor,
-      minHeight: screenHeight * 0.4,
-      borderRadius: BorderRadius.circular(30),
-      body: body,
-      panel: ListView(
-        children: [
-          const SizedBox(
-            height: 30,
-          ),
-          IngredientsCardList(recipe: recipe),
-          const SizedBox(
-            height: 5,
-          ),
-          const Divider(
-            color: Colors.white54,
-          ),
-          Expanded(child: TimeLineWidget(steps: recipe.steps))
-        ],
-      )
-          .animate(delay: 2500.milliseconds)
-          .slideX(begin: -0.5, end: 0, duration: 500.ms)
-          .fadeIn(),
-    );
+    return AnimatedSlidingPanel(
+        recipe: widget.recipe,
+        body: widget.body,
+        screenHeight: widget.screenHeight,
+        ingredientController: _ingridController,
+        baseDelayTime: baseDelayTime,
+        slidingDuration: slidingDuration,
+        listenable: _animation);
   }
 }
