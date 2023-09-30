@@ -36,21 +36,16 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_animate: ^4.2.0+1
-  flex_color_scheme: ^7.2.0
   flutter_riverpod: ^2.4.0
   freezed: ^2.4.2
-  riverpod_annotation: ^2.1.5
   shared_preferences: ^2.2.1
-  google_fonts: ^5.1.0
   timelines: ^0.1.0
-  pixel_perfect: ^1.1.3
   json_annotation: ^4.8.1
   freezed_annotation: ^2.4.1
   shimmer: ^3.0.0
-  bottom_sheet: ^4.0.0
   image_picker: ^1.0.4
   sliding_up_panel: ^2.0.0+1
-  timeline_tile: ^2.0.0
+  flex_color_scheme: ^7.2.0
 
 dev_dependencies:
   flutter_test:
@@ -63,7 +58,6 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
   build_runner: ^2.4.6
-  riverpod_generator: ^2.3.2
   riverpod_lint: ^2.0.4
   custom_lint: ^0.5.3
   json_serializable: ^6.7.1
