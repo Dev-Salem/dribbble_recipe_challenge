@@ -11,6 +11,8 @@ final mainTheme = FlexThemeData.dark().copyWith(
         fontSize: 18,
         fontWeight: FontWeight.bold,
       ),
+      titleSmall: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
+      bodySmall: const TextStyle(fontSize: 14, color: Colors.white60),
       headlineMedium:
           const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
       titleMedium: const TextStyle(

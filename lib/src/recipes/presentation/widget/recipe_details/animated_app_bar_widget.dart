@@ -28,7 +28,10 @@ class AnimatedAppBarWidget extends StatelessWidget {
             )),
         Text(
           name,
-          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          style: Theme.of(context)
+              .textTheme
+              .bodyLarge!
+              .copyWith(color: Colors.white),
         ),
         IconButton(
             onPressed: () {},

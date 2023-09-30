@@ -26,8 +26,7 @@ class TimeLineWidget extends StatelessWidget {
                 child: Text(
                   steps[index],
                   softWrap: true,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.w700, fontSize: 15),
+                  style: Theme.of(context).textTheme.titleSmall,
                 ),
               )
                   .animate(delay: 2700.ms)

@@ -55,12 +55,10 @@ class _InfoViewer extends StatelessWidget {
       children: [
         Text(
           amount.toString(),
-          style: TextStyle(fontSize: 18, color: Colors.amber.shade100),
+          style:
+              Theme.of(context).textTheme.labelMedium!.copyWith(fontSize: 18),
         ),
-        Text(
-          name,
-          style: const TextStyle(fontSize: 14, color: Colors.white60),
-        ),
+        Text(name, style: Theme.of(context).textTheme.bodySmall),
       ],
     );
   }
