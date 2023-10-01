@@ -10,4 +10,3 @@ class OnBoardingScreen extends StatelessWidget {
     return const AnnotatedScaffold(child: OnBoardingBodyWidget());
   }
 }
-//page transition

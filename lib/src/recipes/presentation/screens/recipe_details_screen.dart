@@ -56,33 +56,3 @@ class RecipeDetailsScreen extends StatelessWidget {
     );
   }
 }
-
-/*
-Column(
-          children: [
-            AnimatedAppBarWidget(
-              name: widget.recipe.name,
-              appBarPlayTime: appBarPlayTime,
-              appBarDelayTime: appBarDelayTime,
-            ),
-            SizedBox(
-              height: constraints.maxHeight * 0.04,
-            ),
-            AnimatedDishWidget(
-              constraints: constraints,
-              imageUrl: widget.recipe.imageUrl,
-            ),
-            SizedBox(
-              height: constraints.maxHeight * 0.06,
-            ),
-            AnimatedInfoWidget(
-                nutrition: widget.recipe.nutrition,
-                infoDelayTime: infoDelayTime,
-                infoPlayTime: infoPlayTime,
-                constraints: constraints),
-            SizedBox(
-              height: constraints.maxHeight * 0.06,
-            ),
-          ],
-        );
-*/
