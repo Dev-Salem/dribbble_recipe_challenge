@@ -21,6 +21,7 @@ class RecipeDetailsScreen extends StatelessWidget {
         final appBarDelayTime = 400.ms;
         final infoDelayTime = appBarPlayTime + appBarDelayTime - 200.ms;
         final infoPlayTime = 500.ms;
+        final dishPlayTime = 600.ms;
         return TimeLineSlidingPanel(
             recipe: recipe,
             constraints: constraints,
@@ -37,6 +38,7 @@ class RecipeDetailsScreen extends StatelessWidget {
                 AnimatedDishWidget(
                   constraints: constraints,
                   imageUrl: recipe.imageUrl,
+                  dishPlayTime: dishPlayTime,
                 ),
                 SizedBox(
                   height: constraints.maxHeight * 0.06,

@@ -5,10 +5,12 @@ import 'package:flutter_animate/flutter_animate.dart';
 class AnimatedDishWidget extends StatelessWidget {
   final BoxConstraints constraints;
   final String imageUrl;
+  final Duration dishPlayTime;
   const AnimatedDishWidget({
     Key? key,
     required this.constraints,
     required this.imageUrl,
+    required this.dishPlayTime,
   }) : super(key: key);
 
   @override
@@ -23,7 +25,10 @@ class AnimatedDishWidget extends StatelessWidget {
       )
           .animate()
           .scaleXY(
-              begin: 0.0, end: 1.0, duration: 600.ms, curve: Curves.decelerate)
+              begin: 0.0,
+              end: 1.0,
+              duration: dishPlayTime,
+              curve: Curves.decelerate)
           .fadeIn()
           .blurXY(begin: 10, end: 0),
     );
