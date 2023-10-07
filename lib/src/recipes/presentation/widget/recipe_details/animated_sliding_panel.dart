@@ -25,6 +25,15 @@ class AnimatedSlidingPanel extends AnimatedWidget {
   @override
   Widget build(BuildContext context) {
     return SlidingUpPanel(
+        header: Container(
+          height: 8,
+          width: 50,
+          alignment: Alignment.center,
+          padding: const EdgeInsets.only(top: 20),
+          margin: const EdgeInsets.symmetric(horizontal: 150, vertical: 10),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10), color: Colors.white24),
+        ),
         margin: const EdgeInsets.symmetric(horizontal: 10),
         color: AppColors.cardColor,
         maxHeight: screenHeight * 0.53,

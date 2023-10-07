@@ -1,9 +1,5 @@
 import 'package:dribbble_challenge/src/core/widget/annotated_scaffold.dart';
-import 'package:dribbble_challenge/src/recipes/presentation/widget/home_screen/animated_avatar_widget.dart';
-import 'package:dribbble_challenge/src/recipes/presentation/widget/home_screen/animated_category_list.dart';
-import 'package:dribbble_challenge/src/recipes/presentation/widget/home_screen/animated_name_widget.dart';
-import 'package:dribbble_challenge/src/recipes/presentation/widget/home_screen/animated_recipes_widget.dart';
-import 'package:dribbble_challenge/src/recipes/presentation/widget/home_screen/animated_selected_category_widget.dart';
+import 'package:dribbble_challenge/src/recipes/presentation/widget/home_screen/home_screen_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
