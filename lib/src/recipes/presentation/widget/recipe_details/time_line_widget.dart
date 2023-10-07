@@ -34,7 +34,7 @@ class _TimeLineWidgetState extends State<TimeLineWidget> {
                     index: index,
                     steps: widget.steps)))
         .animate(delay: 2400.ms)
-        .fadeIn(delay: (300).ms)
+        .fadeIn(delay: (500).ms)
         .slideY(begin: 0.2, end: 0);
   }
 }
@@ -104,8 +104,8 @@ class CustomTimeLineWidget extends StatelessWidget {
             Text(steps[index], style: Theme.of(context).textTheme.bodySmall),
           ],
         )
-            .animate(delay: 2700.ms)
-            .fadeIn(delay: (300 * index).ms)
+            .animate(delay: 2800.ms)
+            .fadeIn(delay: (350 * index).ms)
             .slideY(begin: 0.3, end: 0),
       ),
       nodePosition: 0.03,
