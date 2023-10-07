@@ -1,7 +1,4 @@
-import 'package:dribbble_challenge/src/onboarding/widgets/animated_button_widget.dart';
-import 'package:dribbble_challenge/src/onboarding/widgets/animated_description_widget.dart';
-import 'package:dribbble_challenge/src/onboarding/widgets/animated_dish_widget.dart';
-import 'package:dribbble_challenge/src/onboarding/widgets/animated_title_widget.dart';
+import 'package:dribbble_challenge/src/onboarding/widgets/onboarding_screen_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 

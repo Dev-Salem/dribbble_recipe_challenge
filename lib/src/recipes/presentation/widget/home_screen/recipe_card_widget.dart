@@ -154,6 +154,7 @@ class _AnimatedDescriptionWidget extends StatelessWidget {
     return Expanded(
       child: Container(
         width: screenConstraints.maxWidth * 0.4,
+        height: 200,
         padding: EdgeInsets.only(
             top: 10, left: columnConstraints.maxWidth * 0.04, bottom: 10),
         child: Text(description,

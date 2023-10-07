@@ -1,11 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:dribbble_challenge/src/core/widget/annotated_scaffold.dart';
-import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_details/animated_app_bar_widget.dart';
-import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_details/time_line_sliding_panel.dart';
-import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_details/animated_dish_widget.dart';
-import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_details/animated_info_widget.dart';
+import 'package:dribbble_challenge/src/recipes/presentation/widget/recipe_details/recipe_details_widgets.dart';
 import 'package:flutter/material.dart';
-
 import 'package:dribbble_challenge/src/recipes/domain/recipe.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
