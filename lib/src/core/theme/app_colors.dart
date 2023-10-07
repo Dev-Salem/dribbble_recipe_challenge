@@ -6,4 +6,5 @@ class AppColors {
   static const scaffoldBackgroundColor = Color(0xff101520);
   static const infoTextColor = Colors.white60;
   static const onBoardingButtonColor = Colors.amberAccent;
+  static const timeLineColor = Colors.lightGreen;
 }
