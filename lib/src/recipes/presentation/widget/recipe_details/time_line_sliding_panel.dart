@@ -7,12 +7,12 @@ import 'package:dribbble_challenge/src/recipes/domain/recipe.dart';
 class TimeLineSlidingPanel extends StatefulWidget {
   final Recipe recipe;
   final Widget body;
-  final double screenHeight;
+  final BoxConstraints constraints;
   const TimeLineSlidingPanel({
     Key? key,
     required this.recipe,
     required this.body,
-    required this.screenHeight,
+    required this.constraints,
   }) : super(key: key);
 
   @override
@@ -63,7 +63,7 @@ class _TimeLineSlidingPanelState extends State<TimeLineSlidingPanel>
     return AnimatedSlidingPanel(
         recipe: widget.recipe,
         body: widget.body,
-        screenHeight: widget.screenHeight,
+        constraints: widget.constraints,
         ingredientController: _ingridController,
         baseDelayTime: baseDelayTime,
         slidingDuration: slidingDuration,

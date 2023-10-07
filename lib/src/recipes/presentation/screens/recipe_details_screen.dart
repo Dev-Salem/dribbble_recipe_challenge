@@ -23,7 +23,7 @@ class RecipeDetailsScreen extends StatelessWidget {
         final infoPlayTime = 500.ms;
         return TimeLineSlidingPanel(
             recipe: recipe,
-            screenHeight: constraints.maxHeight,
+            constraints: constraints,
             body: Column(
               children: [
                 AnimatedAppBarWidget(
