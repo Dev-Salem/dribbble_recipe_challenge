@@ -1,5 +1,5 @@
 # Description
-A Flutter app that demonstrates Flutter's ability to create beautiful UI with complex animations.
+A demo app that demonstrates Flutter's ability to create beautiful UI with complex animations.
 The app fetches recipes from local storage.
 
 ## 📦 Packages 
