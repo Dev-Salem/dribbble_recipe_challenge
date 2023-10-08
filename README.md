@@ -29,7 +29,7 @@ lib
 	|__ 📁core
 	|	|__ 📁animation <- page transition
 	|	|__ 📁constants
-	|	|__ 📁theme <- define themes & and color platte
+	|	|__ 📁theme <- define themes & and colors
 	|	|__ 📁widgets <- widgets that are used in multiple screens
 	|
     	|__ 📁onboarding <- onboarding screen and its widgets
