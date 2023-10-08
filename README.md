@@ -10,6 +10,12 @@ The app fetches recipes from local storage.
 | Theming | [flex_color_scheme](https://pub.dev/packages/flex_color_scheme) |
 | animation | [flutter_animate](https://pub.dev/packages/flutter_animate) & explicit animation |
 
+## Screenshot 📸
+
+
+https://github.com/Dev-Salem/dribbble_recipe_challenge/assets/108498811/b276696e-aafe-40e4-8134-b53991e654d6
+
+
  
 ## 🩻 Project Structure  
 
