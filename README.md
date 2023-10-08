@@ -26,12 +26,12 @@ lib
 	|	|__ 📁theme <- define themes & and color platte
 	|	|__ 📁widgets <- widgets that are used in multiple screens
 	|
-    |__ 📁onboarding <- onboarding screen and its widgets
-    |
-    |__ 📁recipes 
-        |__ 📁domain <- entities
-        |__ 📁data <- recipe repository (fetch recipes from recipe.json)
-        |__ 📁presentation <- Home Screen & Recipe Details Screen and other related widgets
+    	|__ 📁onboarding <- onboarding screen and its widgets
+	|
+	|__ 📁recipes 
+        	|__ 📁domain <- entities
+		|__ 📁data <- recipe repository (fetch recipes from recipe.json)
+        	|__ 📁presentation <- Home Screen & Recipe Details Screen and other related widgets
 ```
 
 
