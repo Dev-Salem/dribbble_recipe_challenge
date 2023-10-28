@@ -15,6 +15,7 @@ class RecipeCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final playDuration = 600.ms;
     return SizedBox(
       height: constraints.maxHeight * 0.24,
       width: constraints.maxWidth,
@@ -24,20 +25,25 @@ class RecipeCardWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _AnimatedImageWidget(
-                  screenConstraints: constraints,
-                  columnConstraints: columnCons,
-                  imageUrl: recipe.imageUrl),
+                screenConstraints: constraints,
+                columnConstraints: columnCons,
+                imageUrl: recipe.imageUrl,
+                playDuration: playDuration,
+              ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   _AnimatedNutritionText(
+                      playDuration: playDuration,
                       nutrition: recipe.nutrition,
                       columnConstraints: columnCons),
                   _AnimatedNameWidget(
+                      playDuration: playDuration,
                       screenConstraints: constraints,
                       columnConstraints: columnCons,
                       name: recipe.name),
                   _AnimatedDescriptionWidget(
+                      playDuration: playDuration,
                       screenConstraints: constraints,
                       columnConstraints: columnCons,
                       description: recipe.description)
@@ -52,10 +58,12 @@ class RecipeCardWidget extends StatelessWidget {
 }
 
 class _AnimatedNutritionText extends StatelessWidget {
+  final Duration playDuration;
   final Map<String, dynamic> nutrition;
   final BoxConstraints columnConstraints;
   const _AnimatedNutritionText({
     Key? key,
+    required this.playDuration,
     required this.nutrition,
     required this.columnConstraints,
   }) : super(key: key);
@@ -75,18 +83,20 @@ class _AnimatedNutritionText extends StatelessWidget {
               begin: 0,
               end: 1,
               delay: 300.ms,
-              duration: 400.ms,
+              duration: playDuration - 100.ms,
               curve: Curves.decelerate),
     );
   }
 }
 
 class _AnimatedImageWidget extends StatelessWidget {
+  final Duration playDuration;
   final BoxConstraints screenConstraints;
   final BoxConstraints columnConstraints;
   final String imageUrl;
   const _AnimatedImageWidget({
     Key? key,
+    required this.playDuration,
     required this.screenConstraints,
     required this.columnConstraints,
     required this.imageUrl,
@@ -95,25 +105,30 @@ class _AnimatedImageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: screenConstraints.maxHeight * 0.2,
-        width: screenConstraints.maxWidth * 0.4,
-        margin: EdgeInsets.only(
-            left: columnConstraints.maxWidth * 0.05,
-            top: columnConstraints.maxHeight * 0.1),
-        child: Image.asset(
-          imageUrl,
-          fit: BoxFit.contain,
-          alignment: Alignment.center,
-        )).animate(delay: 400.ms).shimmer(duration: 300.ms).flip();
+            height: screenConstraints.maxHeight * 0.2,
+            width: screenConstraints.maxWidth * 0.4,
+            margin: EdgeInsets.only(
+                left: columnConstraints.maxWidth * 0.05,
+                top: columnConstraints.maxHeight * 0.1),
+            child: Image.asset(
+              imageUrl,
+              fit: BoxFit.contain,
+              alignment: Alignment.center,
+            ))
+        .animate(delay: 400.ms)
+        .shimmer(duration: playDuration - 200.ms)
+        .flip();
   }
 }
 
 class _AnimatedNameWidget extends StatelessWidget {
+  final Duration playDuration;
   final BoxConstraints screenConstraints;
   final BoxConstraints columnConstraints;
   final String name;
   const _AnimatedNameWidget({
     Key? key,
+    required this.playDuration,
     required this.screenConstraints,
     required this.columnConstraints,
     required this.name,
@@ -132,18 +147,21 @@ class _AnimatedNameWidget extends StatelessWidget {
               style: Theme.of(context).textTheme.titleLarge //title large
               )
           .animate()
-          .fadeIn(duration: 300.ms, delay: 450.ms, curve: Curves.decelerate)
+          .fadeIn(
+              duration: 300.ms, delay: playDuration, curve: Curves.decelerate)
           .slideX(begin: 0.2, end: 0),
     );
   }
 }
 
 class _AnimatedDescriptionWidget extends StatelessWidget {
+  final Duration playDuration;
   final BoxConstraints screenConstraints;
   final BoxConstraints columnConstraints;
   final String description;
   const _AnimatedDescriptionWidget({
     Key? key,
+    required this.playDuration,
     required this.screenConstraints,
     required this.columnConstraints,
     required this.description,
@@ -168,7 +186,7 @@ class _AnimatedDescriptionWidget extends StatelessWidget {
                 begin: 0,
                 end: 1,
                 delay: 300.ms,
-                duration: 400.ms,
+                duration: playDuration - 100.ms,
                 curve: Curves.decelerate),
       ),
     );
