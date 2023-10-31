@@ -43,7 +43,7 @@ lib
 
 ## 💭 Inspiration
 
-[Dribbble](https://dribbble.com/shots/19973273-Recipe-Mobile-IOS-App)
+Dribbble: https://dribbble.com/shots/19973273-Recipe-Mobile-IOS-App
 
 ## 🗞️ License
 MIT License
