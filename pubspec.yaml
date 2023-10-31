@@ -30,6 +30,7 @@ dependencies:
   image_picker: ^1.0.4
   sliding_up_panel: ^2.0.0+1
   flex_color_scheme: ^7.2.0
+  device_preview: ^1.1.0
 
 dev_dependencies:
   flutter_test:
