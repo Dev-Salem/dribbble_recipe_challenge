@@ -5,20 +5,18 @@ import 'package:flutter_animate/flutter_animate.dart';
 
 class AnimatedTitleWidget extends StatelessWidget {
   final Duration titleDelayDuration;
-  final double width;
   final Duration mainPlayDuration;
 
   const AnimatedTitleWidget({
     Key? key,
     required this.titleDelayDuration,
-    required this.width,
     required this.mainPlayDuration,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width,
+      width: double.infinity,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Text.rich(

@@ -18,7 +18,7 @@ class AnimatedDishWidget extends StatelessWidget {
     return Stack(
       children: [
         Positioned(
-          top: 300,
+          // top: 300,
           left: 30,
           child: Transform.rotate(
             angle: 2 * pi * 0.85,
@@ -37,8 +37,8 @@ class AnimatedDishWidget extends StatelessWidget {
                 curve: Curves.decelerate)
             .slide(begin: const Offset(0.7, -0.4), end: Offset.zero),
         Positioned(
-          top: 140,
-          right: -120,
+          right: -100,
+          top: 30,
           child: Image.asset(
             Assets.blackPepper,
             height: 140,
@@ -53,8 +53,9 @@ class AnimatedDishWidget extends StatelessWidget {
                 curve: Curves.decelerate)
             .slide(begin: const Offset(0.7, -0.4), end: Offset.zero),
         Positioned(
-          top: 300,
+          // top: 300,
           left: -30,
+          bottom: -20,
           child: Transform.rotate(
             angle: 2 * pi * 0.85,
             child: Image.asset(
@@ -72,8 +73,8 @@ class AnimatedDishWidget extends StatelessWidget {
                 curve: Curves.decelerate)
             .slide(begin: const Offset(0.7, -0.4), end: Offset.zero),
         Positioned(
-          top: 10,
-          right: 10,
+          // top: 10,
+          right: 0,
           child: Transform.rotate(
             angle: 2 * pi * 0.45,
             child: Image.asset(
@@ -91,7 +92,7 @@ class AnimatedDishWidget extends StatelessWidget {
                 curve: Curves.decelerate)
             .slide(begin: const Offset(-0.7, 1), end: Offset.zero),
         Container(
-            margin: const EdgeInsets.only(top: 45),
+            //margin: const EdgeInsets.only(top: 45),
             alignment: Alignment.topCenter,
             child: Image.asset(
               Assets.dish,
