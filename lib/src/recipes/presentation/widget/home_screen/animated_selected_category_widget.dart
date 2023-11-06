@@ -3,30 +3,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 class AnimatedSelectedCategoryWidget extends StatelessWidget {
-  final BoxConstraints constraints;
   final Duration selectedCategoryPlayDuration;
   final Duration selectedCategoryDelayDuration;
   const AnimatedSelectedCategoryWidget({
     Key? key,
-    required this.constraints,
     required this.selectedCategoryPlayDuration,
     required this.selectedCategoryDelayDuration,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-            top: constraints.maxHeight * 0.25,
-            left: 30,
-            child: Text(
-              "10 Recipes",
-              style: Theme.of(context).textTheme.titleLarge,
-            ))
-        .animate()
-        .fadeIn(
-            delay: selectedCategoryDelayDuration,
-            duration: selectedCategoryPlayDuration,
-            curve: Curves.decelerate)
-        .slideX(begin: 0.2, end: 0);
+    return Padding(
+      padding: const EdgeInsets.only(left: 20),
+      child: Text(
+        "10 Recipes",
+        style: Theme.of(context).textTheme.titleLarge,
+      )
+          .animate()
+          .fadeIn(
+              delay: selectedCategoryDelayDuration,
+              duration: selectedCategoryPlayDuration,
+              curve: Curves.decelerate)
+          .slideX(begin: 0.2, end: 0),
+    );
   }
 }

@@ -13,7 +13,8 @@ class FoodCategoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      margin: const EdgeInsets.only(right: 15),
       decoration: BoxDecoration(
         border: Border.all(color: Colors.white30, width: 2),
         borderRadius: BorderRadius.circular(25),
