@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:dribbble_challenge/src/core/animation/page_transition.dart';
 import 'package:dribbble_challenge/src/core/theme/app_theme.dart';
 import 'package:dribbble_challenge/src/onboarding/onboarding_screen.dart';
@@ -9,6 +10,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
   runApp(const ProviderScope(child: DribbleChallenge()));
+  // runApp(DevicePreview(
+  //     enabled: true,
+  //     builder: (context) {
+  //       return const ProviderScope(child: DribbleChallenge());
+  //     }));
 }
 
 class DribbleChallenge extends StatelessWidget {
@@ -17,6 +23,7 @@ class DribbleChallenge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: DevicePreview.locale(context),
       home: const OnBoardingScreen(),
       onGenerateRoute: (settings) {
         return switch (settings.name) {

@@ -32,69 +32,68 @@ class _OnBoardingBodyWidgetState extends State<OnBoardingBodyWidget>
     final titleDelayDuration = mainPlayDuration + 50.ms;
     final descriptionDelayDuration = titleDelayDuration + 300.ms;
     final buttonDelayDuration = descriptionDelayDuration + 100.ms;
-
-    return LayoutBuilder(builder: (context, constraint) {
-      return Column(
-        children: [
-          SizedBox(
-            height: constraint.maxHeight * 0.60,
-            child: AnimatedDishWidget(
-              dishPlayDuration: mainPlayDuration,
-              leavesDelayDuration: leavesDelayDuration,
-            ),
+    final buttonPlayDuration = mainPlayDuration - 200.ms;
+    return Column(
+      children: [
+        const Flexible(
+          child: SizedBox(
+            height: 50,
           ),
-          SizedBox(
-            height: constraint.maxHeight * 0.05,
+        ),
+        Flexible(
+          flex: 6,
+          child: AnimatedDishWidget(
+            dishPlayDuration: mainPlayDuration,
+            leavesDelayDuration: leavesDelayDuration,
           ),
-          SizedBox(
-            height: constraint.maxHeight * 0.12,
-            child: AnimatedTitleWidget(
-                titleDelayDuration: titleDelayDuration,
-                width: constraint.maxWidth,
-                mainPlayDuration: mainPlayDuration),
+        ),
+        const SizedBox(
+          height: 30,
+        ),
+        Flexible(
+          flex: 2,
+          child: AnimatedTitleWidget(
+              titleDelayDuration: titleDelayDuration,
+              mainPlayDuration: mainPlayDuration),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Flexible(
+          flex: 1,
+          child: AnimatedDescriptionWidget(
+            descriptionPlayDuration: mainPlayDuration,
+            descriptionDelayDuration: descriptionDelayDuration,
           ),
-          SizedBox(
-            height: constraint.maxHeight * 0.02,
+        ),
+        Expanded(
+          flex: 3,
+          child: GestureDetector(
+            onTap: () {
+              _controller.forward();
+              _controller.addStatusListener((status) {
+                if (status == AnimationStatus.completed) {
+                  Future.delayed(400.ms, () {
+                    Navigator.of(context).pushNamed('home');
+                  });
+                }
+              });
+            },
+            child: AnimatedButtonWidget(
+                buttonDelayDuration: buttonDelayDuration,
+                buttonPlayDuration: buttonPlayDuration),
           ),
-          SizedBox(
-            height: constraint.maxHeight * 0.07,
-            child: AnimatedDescriptionWidget(
-                descriptionPlayDuration: mainPlayDuration,
-                descriptionDelayDuration: descriptionDelayDuration,
-                width: constraint.maxWidth),
-          ),
-          SizedBox(
-            height: constraint.maxHeight * 0.03,
-          ),
-          SizedBox(
-            child: GestureDetector(
-              onTap: () {
-                _controller.forward();
-                _controller.addStatusListener((status) {
-                  if (status == AnimationStatus.completed) {
-                    Future.delayed(400.ms, () {
-                      Navigator.of(context).pushNamed('home');
-                    });
-                  }
-                });
-              },
-              child: AnimatedButtonWidget(
-                  width: constraint.maxWidth,
-                  buttonDelayDuration: buttonDelayDuration,
-                  buttonPlayDuration: mainPlayDuration),
-            ),
-          )
-        ],
-      )
-          .animate(
-            autoPlay: false,
-            controller: _controller,
-          )
-          .blurXY(begin: 0, end: 25, duration: 600.ms, curve: Curves.easeInOut)
-          .scaleXY(begin: 1, end: 0.6)
-          .fadeOut(
-            begin: 1,
-          );
-    });
+        )
+      ],
+    )
+        .animate(
+          autoPlay: false,
+          controller: _controller,
+        )
+        .blurXY(begin: 0, end: 25, duration: 600.ms, curve: Curves.easeInOut)
+        .scaleXY(begin: 1, end: 0.6)
+        .fadeOut(
+          begin: 1,
+        );
   }
 }

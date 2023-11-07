@@ -6,19 +6,19 @@ import 'package:flutter_animate/flutter_animate.dart';
 class AnimatedDescriptionWidget extends StatelessWidget {
   final Duration descriptionPlayDuration;
   final Duration descriptionDelayDuration;
-  final double width;
   const AnimatedDescriptionWidget({
     Key? key,
     required this.descriptionPlayDuration,
     required this.descriptionDelayDuration,
-    required this.width,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: width,
-        padding: const EdgeInsets.symmetric(horizontal: 40),
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(
+          horizontal: 40,
+        ),
         child: Text(
           Strings.onBoardingSlogan,
           maxLines: 2,
