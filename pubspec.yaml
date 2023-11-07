@@ -22,12 +22,9 @@ dependencies:
   flutter_animate: ^4.2.0+1
   flutter_riverpod: ^2.4.0
   freezed: ^2.4.2
-  shared_preferences: ^2.2.1
   timelines: ^0.1.0
   json_annotation: ^4.8.1
   freezed_annotation: ^2.4.1
-  shimmer: ^3.0.0
-  image_picker: ^1.0.4
   sliding_up_panel: ^2.0.0+1
   flex_color_scheme: ^7.2.0
   device_preview: ^1.1.0
