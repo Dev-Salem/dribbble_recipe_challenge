@@ -5,16 +5,16 @@ import 'package:dribbble_challenge/src/onboarding/onboarding_screen.dart';
 import 'package:dribbble_challenge/src/recipes/domain/recipe.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/screens/home_screen.dart';
 import 'package:dribbble_challenge/src/recipes/presentation/screens/recipe_details_screen.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(DevicePreview(
-      enabled: !kReleaseMode,
-      builder: (context) {
-        return const ProviderScope(child: DribbleChallenge());
-      }));
+  runApp(const ProviderScope(child: DribbleChallenge()));
+  // runApp(DevicePreview(
+  //     enabled: true,
+  //     builder: (context) {
+  //       return const ProviderScope(child: DribbleChallenge());
+  //     }));
 }
 
 class DribbleChallenge extends StatelessWidget {

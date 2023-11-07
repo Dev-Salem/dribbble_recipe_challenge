@@ -43,6 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
         categoryListDelayDuration + categoryListPlayDuration;
     return AnnotatedScaffold(
       child: CustomScrollView(
+        physics: const ClampingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
             child: Column(
@@ -59,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     nameDelayDuration: nameDelayDuration,
                     namePlayDuration: namePlayDuration),
                 const SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 AnimatedCategoryList(
                   categoryListPlayDuration: categoryListPlayDuration,
@@ -73,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   selectedCategoryDelayDuration: selectedCategoryDelayDuration,
                 ),
                 const SizedBox(
-                  height: 50,
+                  height: 40,
                 ),
               ],
             ),

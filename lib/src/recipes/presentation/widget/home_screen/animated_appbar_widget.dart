@@ -47,7 +47,7 @@ class AnimatedAppBarWidget extends StatelessWidget {
                 curve: Curves.easeInOutSine)
             .then(delay: avatarWaitingDuration)
             .scaleXY(begin: 3, end: 1)
-            .slide(begin: const Offset(-3.5, 8), end: Offset.zero),
+            .slide(begin: const Offset(-4, 6), end: Offset.zero),
         const SizedBox(
           width: 25,
         )
